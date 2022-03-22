@@ -1,17 +1,24 @@
 import './App.css';
-import ComponenteA from './components/ComponenteA';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import NavBar from './components/NavBarComponent';
+import ItemListContainer from './components/ItemListContainerComponent';
+
 
 
 
 function App() {
 
-  const name = "josu";
+  const saludo = "Bienvenido querido";
 
   return (
+    
     <div>
-    <h2>Hola Mundo!</h2>
-    <ComponenteA lastName={name}/>
+    <NavBar/>
+    <ItemListContainer greeting={saludo}/>
     </div>
+
+    
   );
 }
 

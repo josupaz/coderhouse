@@ -1,0 +1,11 @@
+.navbar-2 {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: black;
+    padding-top: 10px;
+}
+
+.name-empresa{
+    color: white;
+    padding-top: 5px;
+}
