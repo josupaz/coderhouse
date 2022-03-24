@@ -2,7 +2,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import NavBar from './components/NavBarComponent';
-import ItemListContainer from './components/ItemListContainerComponent';
+import ItemListContainer from './containers/ItemListContainerComponent';
 
 
 
