@@ -1,8 +1,8 @@
 import React from "react";
 import Nav from 'react-bootstrap/Nav'
 import "./styles.css";
-import logo from '../../imgs/logo.png';
-import Cart from "../CardWidgetComponent";
+import logo from '../../assets/images/logo.png';
+import Cart from "../CardWidget";
 
 
 const NavBar = () => {

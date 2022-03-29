@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles.css";
-import cart from '../../imgs/cart.png';
+import cart from '../../assets/images/cart.png';
 
 
 const Cart = () => {

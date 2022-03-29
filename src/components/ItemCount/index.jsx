@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './styles.css';
 
-const ItemCount = ({stock, onAdd}) => {
+const ItemCount = ({stock}) => {
 
     const [quantity, setQuantity] = useState(1);
 
@@ -18,17 +18,15 @@ const ItemCount = ({stock, onAdd}) => {
     }
 
     return (
-        <div className='container'>
-            <h2>Producto</h2>
-            <h3>Descripcion</h3>
+        <div className='container-count'>
             <div className='buttons'>
                 <button onClick={handleDecrement} type="button" className="btn btn-danger btn-sm"> - </button>
                 <span>  {quantity}  </span>
                 <button onClick={handleAdd} type="button" className="btn btn-primary btn-sm"> + </button>
             </div>
-            <button onClick={()=> onAdd(quantity) } type="button" className="btn btn-success btn-sm">Add to cart</button>
+            <button type="button" className="btn btn-success btn-sm">Add to cart</button>
         </div>
     )
 }
 
-export default ItemCount
+export default ItemCount;
