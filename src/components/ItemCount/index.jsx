@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import './styles.css';
 
-const ItemCount = ({stock}) => {
+const ItemCount = () => {
 
     const [quantity, setQuantity] = useState(1);
+    const stock= 10;// esto debe pasar por parametro, actualmente mockeado para pruebas
 
     const handleDecrement = () => {
         if (quantity > 1) {

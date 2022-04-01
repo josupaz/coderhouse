@@ -12,12 +12,12 @@ const NavBar = () => {
     <>
 
     <div className = 'navbar-2'>
-    <img src={logo} width="100" height="50" />
+    <img src={logo} alt="img-SM" width="100" height="50" />
     <h3 className="name-empresa">empresa SM</h3>
     <Cart/>
     <Nav justify variant="pills" defaultActiveKey="/home">
         <Nav.Item>
-          <Nav.Link href="/home">Inicio</Nav.Link>
+          <Nav.Link href="/">Inicio</Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link eventKey="link-2">Vehiculos</Nav.Link>
