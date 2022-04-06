@@ -20,16 +20,16 @@ const NavBar = () => {
           <Nav.Link href="/">Inicio</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="link-2">Vehiculos</Nav.Link>
+          <Nav.Link href="/hombre">Hombres</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="link-3">Electronica</Nav.Link>
+          <Nav.Link href="/mujer">Mujer</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="link-4">Libros</Nav.Link>
+          <Nav.Link href="/joyas">Joyas</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="link-5">Login</Nav.Link>
+          <Nav.Link href="/electronica">Electronica</Nav.Link>
         </Nav.Item>
       </Nav>
     </div>

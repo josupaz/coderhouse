@@ -21,7 +21,6 @@ const ItemDetail = ({ product }) => {
     }
 
     const handleTerminate = () => {
-      console.log("Terminó la compra")
       addItem(product, quantity);
       navigate('/cart');
   }
@@ -30,16 +29,19 @@ const ItemDetail = ({ product }) => {
 
   return (
     <div className="container">
-      <div className="detail">
       <img className="img" src={product.image} alt="product-img" />
+      <div className="detail">
         <h2>{product.title}</h2>
         <h2>Descripcion: {product.description}</h2>
+        <h3>Precio: {product.price}</h3>
       </div>
       <div>
-        {displayItemCount ? <ItemCount stock={stock} onAdd = {onAdd} /> : 
-        <button onClick={handleTerminate} className="btn btn-primary"> Finalizar compra </button>
+        {displayItemCount ? <ItemCount stock={product.stock} onAdd = {onAdd} /> : 
+        <>
+          <h2> Se agrego {quantity} producto/s al carrito</h2>
+          <button onClick={handleTerminate} className="btn btn-primary"> Finalizar compra </button>
+        </>
         }
-        
       </div>
     </div>
   );

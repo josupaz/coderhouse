@@ -3,7 +3,16 @@
     max-height: 300px;
 }
 
+.card-header{
+    height: 70px;
+}
+
 .card-body{
     display: flex;
     justify-content: center;
+    height: 200px;
+}
+
+.tarjetaProducto{
+    padding-bottom: 50px;
 }

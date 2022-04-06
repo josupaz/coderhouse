@@ -3,11 +3,9 @@ import ItemList from "../../components/ItemList";
 import "./styles.css";
 import { db } from '../../Firebase/config';
 import { collection, getDocs } from "firebase/firestore";
-import { useParams } from "react-router-dom";
 
-const ItemListContainer = () => {
+const ItemListContainer = ({category}) => {
   const [products, setProducts] = useState([]);
-  const { id } = useParams() //Siempre trae un string
 
   useEffect(() => {
     (async () => {
@@ -18,21 +16,19 @@ const ItemListContainer = () => {
             // doc.data() is never undefined for query doc snapshots
             products.push({id: doc.id, ...doc.data()})
         });
-        console.log(products);
-
-        if (!id) {
+        
+        if (category === "all") {
             setProducts(products);
         } else {
-            //Filtrar según el id
-            const productsFiltrados = products.filter(products => products.category === id)
-            console.log(productsFiltrados);
+            //Filtrar según la categoria
+            const productsFiltrados = products.filter(products => products.category === category)
             setProducts(productsFiltrados);
         }
     } catch (error) {
         console.log(error);
     }
 })()
-  }, [id]);
+  }, []);
 
  return (
   <div className="container">

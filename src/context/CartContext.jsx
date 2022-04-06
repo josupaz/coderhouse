@@ -10,7 +10,6 @@ const CartContext = ({children}) => {
     const addItem = (product, quantityToAdd) => {
 
         const producto = isInCart(product);
-        console.log(producto);
         if (producto) {
             producto.quantity += quantityToAdd;
             const cartFiltrado = cart.filter(elemento => elemento.id !== producto.id);
