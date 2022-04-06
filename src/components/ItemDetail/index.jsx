@@ -1,18 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import ItemCount from "../ItemCount";
+import { Cart } from "../../context/CartContext"
 
 import "./styles.css";
 
 const ItemDetail = ({ product }) => {
     const stock = 10;
-    const navigate = useNavigate;
+    const navigate = useNavigate();
+    const {addItem} = useContext(Cart);
+
     const [displayItemCount, setDisplayItemCount] = useState(true);
+    const [quantity, setQuantity] = useState(0);
+
 
     const onAdd = (quantity) => {
         console.log(`Se agregaron ${quantity} productos al carrito`);
+        setQuantity(quantity);
         setDisplayItemCount(false);
     }
+
+    const handleTerminate = () => {
+      console.log("Terminó la compra")
+      addItem(product, quantity);
+      navigate('/cart');
+  }
 
 
 
@@ -25,7 +37,7 @@ const ItemDetail = ({ product }) => {
       </div>
       <div>
         {displayItemCount ? <ItemCount stock={stock} onAdd = {onAdd} /> : 
-        <button onClick={() => navigate(`/cart`)} className="btn btn-primary"> Finalizar compra </button>
+        <button onClick={handleTerminate} className="btn btn-primary"> Finalizar compra </button>
         }
         
       </div>
