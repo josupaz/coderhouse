@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import './styles.css';
 
-const ItemCount = () => {
+const ItemCount = ({ stock, onAdd}) => {
 
     const [quantity, setQuantity] = useState(1);
-    const stock= 10;// esto debe pasar por parametro, actualmente mockeado para pruebas
 
     const handleDecrement = () => {
         if (quantity > 1) {
@@ -25,7 +24,7 @@ const ItemCount = () => {
                 <span>  {quantity}  </span>
                 <button onClick={handleAdd} type="button" className="btn btn-primary btn-sm"> + </button>
             </div>
-            <button type="button" className="btn btn-success btn-sm">Add to cart</button>
+            <button onClick={()=> onAdd(quantity) } type="button" className="btn btn-success btn-sm">Agregar al carrito</button>
         </div>
     )
 }

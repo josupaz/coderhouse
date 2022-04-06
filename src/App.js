@@ -6,6 +6,8 @@ import ItemListContainer from './containers/ItemListContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ItemDetailContainer from './containers/ItemDetailContainer';
 import NotFound from './components/NotFound';
+import Cart from './components/Cart';
+
 
 
 
@@ -18,6 +20,7 @@ function App() {
     <Routes>
     <Route path = '/' element = {<ItemListContainer/>}/>
     <Route path = '/product/:id'  element = {<ItemDetailContainer/>} />
+    <Route path = '/cart'  element = {<Cart/>} />
     <Route path = '*' element = {<NotFound/>} />
     </Routes>
     </BrowserRouter>

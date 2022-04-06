@@ -1,5 +1,4 @@
 import React from 'react'
-import ItemCount from '../ItemCount';
 import { useNavigate } from 'react-router-dom';
 import './styles.css'
 
@@ -7,11 +6,7 @@ import './styles.css'
 function Item(product) {
 
     const navigate = useNavigate();
-/*
-    const onAdd = (count) => {
-        console.log(`Se agregaron ${count} productos al carrito`);
-    } 
-*/
+    
   return (
       <div className="tarjetaProducto col-sm-4">
         <div className="card minheight ">
@@ -26,7 +21,6 @@ function Item(product) {
             
           </div>
           <button onClick={() => navigate(`/product/${product.id}`)}> Detalle </button>
-          <ItemCount/>
         </div>
 
       </div>

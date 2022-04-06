@@ -10,7 +10,7 @@ const ItemListContainer = () => {
     //Funcion autoreferenciada - traigo datos del mock
     (async () => {
       try {
-        const response = await fetch("https://fakestoreapi.com/products/");
+        const response = await fetch('/data.json');
         const data = await response.json();
         setTimeout(()=>{
           setProducts(data);

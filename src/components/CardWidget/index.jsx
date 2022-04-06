@@ -3,14 +3,14 @@ import "./styles.css";
 import cart from '../../assets/images/cart.png';
 
 
-const Cart = () => {
+const CartWidget = () => {
 
 
   return (
     <>
-    <img className="cart" src={cart} width="60" height="40" />
+    <img className="cart" alt="cart-widget" src={cart} width="60" height="40" />
     </>
   );
 };
 
-export default Cart;
+export default CartWidget;

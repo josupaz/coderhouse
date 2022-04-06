@@ -2,7 +2,7 @@ import React from "react";
 import Nav from 'react-bootstrap/Nav'
 import "./styles.css";
 import logo from '../../assets/images/logo.png';
-import Cart from "../CardWidget";
+import CartWidget from "../CardWidget";
 
 
 const NavBar = () => {
@@ -14,7 +14,7 @@ const NavBar = () => {
     <div className = 'navbar-2'>
     <img src={logo} alt="img-SM" width="100" height="50" />
     <h3 className="name-empresa">empresa SM</h3>
-    <Cart/>
+    <CartWidget/>
     <Nav justify variant="pills" defaultActiveKey="/home">
         <Nav.Item>
           <Nav.Link href="/">Inicio</Nav.Link>
