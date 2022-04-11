@@ -3,9 +3,12 @@ import ItemList from "../../components/ItemList";
 import "./styles.css";
 import { db } from '../../Firebase/config';
 import { collection, getDocs } from "firebase/firestore";
+import { useParams } from "react-router-dom";
 
-const ItemListContainer = ({category}) => {
+
+const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
+  const { id } = useParams()
 
   useEffect(() => {
     (async () => {
@@ -17,18 +20,18 @@ const ItemListContainer = ({category}) => {
             products.push({id: doc.id, ...doc.data()})
         });
         
-        if (category === "all") {
+        if (!id) {
             setProducts(products);
         } else {
             //Filtrar según la categoria
-            const productsFiltrados = products.filter(products => products.category === category)
+            const productsFiltrados = products.filter(products => products.category === id)
             setProducts(productsFiltrados);
         }
     } catch (error) {
         console.log(error);
     }
 })()
-  }, []);
+  }, [id]);
 
  return (
   <div className="container">

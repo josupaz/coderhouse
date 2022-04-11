@@ -4,6 +4,7 @@
     justify-content: space-around;
     align-items: center;
     width: 90%;
+    background-color: whitesmoke;
 }
 
 .img{
@@ -21,4 +22,8 @@ h2{
 
 h3{
     text-align: center;
+}
+
+.btn{
+    margin: 5px!important;
 }

@@ -1,16 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import CartContext from './context/CartContext';
-
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import ShopProvider from "./context/ShopProvider";
 
 ReactDOM.render(
   <React.StrictMode>
-    <CartContext>
-    <App />
-    </CartContext>
+    <ShopProvider>
+      <App />
+    </ShopProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

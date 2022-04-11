@@ -1,14 +1,13 @@
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import ItemCount from "../ItemCount";
-import { Cart } from "../../context/CartContext"
+import { Shop } from "../../context/ShopProvider"
 
 import "./styles.css";
 
 const ItemDetail = ({ product }) => {
-    const stock = 10;
     const navigate = useNavigate();
-    const {addItem} = useContext(Cart);
+    const {addItem} = useContext(Shop);
 
     const [displayItemCount, setDisplayItemCount] = useState(true);
     const [quantity, setQuantity] = useState(0);
@@ -17,13 +16,17 @@ const ItemDetail = ({ product }) => {
     const onAdd = (quantity) => {
         console.log(`Se agregaron ${quantity} productos al carrito`);
         setQuantity(quantity);
+        addItem(product, quantity);
         setDisplayItemCount(false);
     }
 
-    const handleTerminate = () => {
-      addItem(product, quantity);
+    const finalizarCompra = () => {
       navigate('/cart');
-  }
+    }
+
+    const goHome = () => {
+      navigate('/');
+    }
 
 
 
@@ -39,7 +42,10 @@ const ItemDetail = ({ product }) => {
         {displayItemCount ? <ItemCount stock={product.stock} onAdd = {onAdd} /> : 
         <>
           <h2> Se agrego {quantity} producto/s al carrito</h2>
-          <button onClick={handleTerminate} className="btn btn-primary"> Finalizar compra </button>
+          <div className="container-buttons">
+          <button onClick={finalizarCompra} className="btn btn-primary"> Finalizar compra </button>
+          <button onClick={goHome} className="btn btn-primary"> Seguir navegando </button>
+          </div>
         </>
         }
       </div>
