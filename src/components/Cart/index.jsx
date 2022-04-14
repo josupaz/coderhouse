@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Shop } from '../../context/ShopProvider';
 import CartProduct from '../CartProduct';
 import Checkout from '../Checkout';
+import './styles.css';
 
 const Cart = () => {
   const navigate = useNavigate();           
@@ -29,13 +30,13 @@ const Cart = () => {
   }
 
   return (
-    <div >
+    <div className="container">
       {cart.map(item => <CartProduct deleteProduct={deleteProduct}product={item} key={item.id} />)}
       <h3>Total: {suma}</h3>
       <button className='btn btn-primary m-2' onClick={handleCheckout}>Checkout</button>
       {modal && <Checkout
         handleClose={handleClose}
-        products={cart}
+        cart={cart}
         total={suma}
         clear={clear}
       />}

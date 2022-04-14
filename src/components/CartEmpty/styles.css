@@ -1,0 +1,9 @@
+.h2{
+    font-size: 32px;
+}
+
+.btn-cart-empty{
+    margin: 20px!important;
+    margin-left: 50px!important;
+    padding: 10px!important;
+}

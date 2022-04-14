@@ -1,0 +1,17 @@
+.cart {
+  display: inline-flex;
+}
+
+.h2-cart {
+  color: aqua;
+  font-size: 28px;
+  position: absolute;
+  padding-left: 26.5px;
+  padding-top: 6px;
+}
+
+.cart-button {
+  background-color: transparent !important;
+  border: none !important;
+  z-index: 1!important;
+}

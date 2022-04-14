@@ -1,14 +1,14 @@
 import React from "react";
 import "./styles.css";
 import logo from "../../assets/images/logo.png";
-import CartWidget from "../CardWidget";
+import CartWidget from "../CartWidget";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
-        <span className="navbar-brand" href="/#">
+        <span className="navbar-brand" >
           <Link to="/" style={{ textDecoration: "none" }}>
             <img src={logo} alt="img-SM" width="100" height="50" />
           </Link>
@@ -27,28 +27,28 @@ const NavBar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <span className="nav-link" href="/#">
+              <span className="nav-link" >
                 <Link to="/category/hombre" style={{ textDecoration: "none" }}>
                   Hombre
                 </Link>
               </span>
             </li>
             <li className="nav-item">
-              <span className="nav-link" href="/#">
+              <span className="nav-link" >
                 <Link to="/category/mujer" style={{ textDecoration: "none" }}>
                   Mujer
                 </Link>
               </span>
             </li>
             <li className="nav-item">
-              <span className="nav-link" href="/#">
+              <span className="nav-link" >
                 <Link to="/category/joyas" style={{ textDecoration: "none" }}>
                   Joyas
                 </Link>
               </span>
             </li>
             <li className="nav-item">
-              <span className="nav-link" href="/#">
+              <span className="nav-link" >
                 <Link
                   to="/category/electronica"
                   style={{ textDecoration: "none" }}
