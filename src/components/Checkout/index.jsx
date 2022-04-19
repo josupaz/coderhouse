@@ -102,8 +102,6 @@ const Checkout = ({ handleClose, cart, total, clear }) => {
             Confirmar compra
           </button>
         </form>
-
-        <CardPayment></CardPayment>
       </div>
     </div>
   );

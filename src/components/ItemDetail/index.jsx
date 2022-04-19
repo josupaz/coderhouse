@@ -31,8 +31,10 @@ const ItemDetail = ({ product }) => {
 
 
   return (
-    <div className="container">
+    <div className="container-fix container">
+      <div className="div-img-fix">
       <img className="img" src={product.image} alt="product-img" />
+      </div>
       <div className="detail">
         <h2>{product.title}</h2>
         <h2>Descripcion: {product.description}</h2>
@@ -43,8 +45,8 @@ const ItemDetail = ({ product }) => {
         <>
           <h2> Se agrego {quantity} producto/s al carrito</h2>
           <div className="container-buttons">
-          <button onClick={finalizarCompra} className="btn btn-primary"> Finalizar compra </button>
-          <button onClick={goHome} className="btn btn-primary"> Seguir navegando </button>
+          <button className="btn-fix css-button css-button-rounded css-button-fully-rounded--black " onClick={finalizarCompra}> Finalizar compra </button>
+          <button className="btn-fix css-button css-button-rounded css-button-rounded--black css-button-fully-rounded--black " onClick={goHome} > Seguir navegando </button>
           </div>
         </>
         }

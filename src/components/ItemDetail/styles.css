@@ -1,29 +1,97 @@
-.container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 90%;
-    background-color: whitesmoke;
+.container-fix {
+  display: flex;
+  flex-direction: row!important;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  background-color: whitesmoke;
+  width: 100%;
+  margin-top: 30px;
 }
 
-.img{
-    max-width: 250px;
+.container-buttons{
+    min-width: 180px;
 }
 
-.detail{
-    display: inline-flex;
-    flex-direction: column;
+.div-img-fix {
+  height: 280px!important;
+  min-width: 280px!important;
+  background-color: #fff;
+  text-align: center;
+  border: solid 2px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  margin-bottom: 50px;
 }
 
-h2{
-    font-size: 20px;
+.img {
+  align-items: center;
+  max-width: 250px;
+  max-height: 250px;
 }
 
-h3{
-    text-align: center;
+.detail {
+  display: inline-flex;
+  flex-direction: column;
 }
 
-.btn{
-    margin: 5px!important;
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  text-align: center;
+}
+
+.btn-fix {
+  margin: 5px !important;
+  background-color: #212529 !important;
+}
+
+.btn-fix:hover {
+  margin: 5px !important;
+  background-color: #ffffff !important;
+}
+
+.css-button-fully-rounded--black {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 20px;
+  border: 2px solid #212529;
+}
+.css-button-fully-rounded--black:hover {
+  background: #fff;
+  color: #212529;
+}
+
+.css-button-rounded--black {
+  border: 2px solid #212529;
+}
+.css-button-rounded {
+  border-radius: 5px;
+}
+.css-button {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-weight: 700;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border: none;
 }

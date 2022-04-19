@@ -1,18 +1,80 @@
-.product-image{
-    max-width: 200px;
-    max-height: 300px;
+.product-image {
+  max-width: 200px;
+  max-height: 300px;
 }
 
-.card-header{
-    height: 70px;
+.card{
+    background-color: rgba(234, 242, 248, 0.6)!important;
 }
 
-.card-body{
-    display: flex;
-    justify-content: center;
-    height: 200px;
+.card-header {
+  height: 70px;
 }
 
-.tarjetaProducto{
-    padding-bottom: 50px;
+.card-body {
+  display: flex;
+  justify-content: center;
+  height: 200px;
+}
+
+.tarjetaProducto {
+  padding-bottom: 50px;
+}
+
+.css-button-arrow--green {
+  min-width: 130px;
+  height: 40px;
+  color: rgb(0, 0, 0);
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  overflow: hidden;
+  border-radius: 5px;
+  border: none;
+  background-color: #80ed99;
+}
+.css-button-arrow--green:hover {
+  border-radius: 5px;
+  padding-right: 24px;
+  padding-left: 8px;
+}
+.css-button-arrow--green:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+.css-button-arrow--green:after {
+  content: "\00BB";
+  position: absolute;
+  opacity: 0;
+  font-size: 20px;
+  line-height: 40px;
+  top: 0;
+  right: -20px;
+  transition: 0.4s;
+}
+
+.css-button-arrow--green {
+  background-color: #80ed99;
+}
+.css-button-arrow {
+  overflow: hidden;
+}
+.css-button {
+  min-width: 130px;
+  height: 40px;
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-weight: 700;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border: none;
 }

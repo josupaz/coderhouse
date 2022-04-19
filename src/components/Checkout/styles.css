@@ -16,7 +16,7 @@
 .modal{
     display: flex!important;
     position: relative;
-    height:500px;
+    height:100px;
     width: 900px;
     padding: 30px;
     background-color: whitesmoke;
