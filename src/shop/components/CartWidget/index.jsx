@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import "./styles.css";
-import cartimg from '../../assets/images/cart2.png';
+import cartimg from '../../../assets/images/cart2.png';
 import { useNavigate } from "react-router-dom";
-import { Shop } from '../../context/ShopProvider';
+import { Shop } from '../../../context/ShopProvider';
 
 
 

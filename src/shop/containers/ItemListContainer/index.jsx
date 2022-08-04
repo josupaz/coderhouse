@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from "react";
 import ItemList from "../../components/ItemList";
 import "./styles.css";
-import { db } from '../../Firebase/config';
+import { db } from '../../../Firebase/config';
 import { collection, getDocs } from "firebase/firestore";
 import { useParams } from "react-router-dom";
 

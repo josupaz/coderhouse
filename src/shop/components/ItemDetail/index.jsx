@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import ItemCount from "../ItemCount";
-import { Shop } from "../../context/ShopProvider"
+import { Shop } from "../../../context/ShopProvider"
 
 import "./styles.css";
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./styles.css";
-import { db } from "../../Firebase/config";
+import { db } from "../../../Firebase/config";
 import {
   addDoc,
   collection,

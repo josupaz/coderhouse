@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-import robot from "../../assets/images/robot.png";
+import robot from "../../../assets/images/robot.png";
 
 const NotFound = () => {
   const navigate = useNavigate();

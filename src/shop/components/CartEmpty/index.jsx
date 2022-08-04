@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-import cartempty from '../../assets/images/cartempty.jpg';
+import cartempty from '../../../assets/images/cartempty.jpg';
 import './styles.css'
 
 function CartEmpty() {
